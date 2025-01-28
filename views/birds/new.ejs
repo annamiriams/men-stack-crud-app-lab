@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a bird</title>
+</head>
+<body>
+    <h1>Add a bird to the database</h1>
+    <form action="/birds" method='POST'>
+        <fieldset>
+            <legend>Enter info:</legend>
+            <div>
+                <label for="name" required>Name:</label>
+                <input type="text" id="name" required>
+            </div>
+        
+            <div>
+                <label for="family" required>Family:</label>
+                <select id="family" name="family" required>
+                    <option value="dropdown" selected></option>
+                    <option value="waterfowl">waterfowl</option>
+                    <option value="shorebirds">shorebirds</option>
+                    <option value="herons">herons</option>
+                    <option value="birdsOfPrey">birds of prey</option>
+                    <option value="woodpeckers">woodpeckers</option>
+                    <option value="songbirds">songbirds</option>
+                    <option value="other">other</option>
+                </select>
+            </div>
+
+            <div>
+                <!-- figure out ids here -->
+                <label for="description" required>Description:</label>
+                <textarea id="description" required maxLength='100'></textarea>
+            </div>
+            
+            <button type="submit" id="button" style="vertical-align:middle">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
