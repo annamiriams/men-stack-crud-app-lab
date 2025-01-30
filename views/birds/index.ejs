@@ -1,0 +1,27 @@
+<!-- views/birds/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds index</title>
+</head>
+
+<body>
+    <h1>All Birds</h1>
+
+    <ul>
+        <% birds.forEach(bird=> { %>
+            <li>
+                <%= bird.name %>
+            </li>
+            <% }); %>
+    </ul>
+
+    <a href="/birds/new">Add a Bird</a>
+
+</body>
+
+</html>

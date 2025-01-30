@@ -1,3 +1,5 @@
+<!-- views/birds/new.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,32 +13,36 @@
         <fieldset>
             <legend>Enter info:</legend>
             <div>
-                <label for="name" required>Name:</label>
-                <input type="text" id="name" required>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
             </div>
         
             <div>
-                <label for="family" required>Family:</label>
-                <select id="family" name="family" required>
+                <label for="family">Family:</label>
+                <select id="family" name="family">
                     <option value="dropdown" selected></option>
-                    <option value="waterfowl">waterfowl</option>
-                    <option value="shorebirds">shorebirds</option>
-                    <option value="herons">herons</option>
-                    <option value="birdsOfPrey">birds of prey</option>
-                    <option value="woodpeckers">woodpeckers</option>
-                    <option value="songbirds">songbirds</option>
-                    <option value="other">other</option>
+                    <option value="waterfowl">Waterfowl</option>
+                    <option value="shorebirds">Shorebirds</option>
+                    <option value="herons">Herons</option>
+                    <option value="birdsOfPrey">Birds of Prey</option>
+                    <option value="woodpeckers">Woodpeckers</option>
+                    <option value="songbirds">Songbirds</option>
+                    <option value="other">Other</option>
                 </select>
             </div>
 
             <div>
                 <!-- figure out ids here -->
-                <label for="description" required>Description:</label>
-                <textarea id="description" required maxLength='100'></textarea>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" maxLength='100'></textarea>
             </div>
             
             <button type="submit" id="button" style="vertical-align:middle">Submit</button>
         </fieldset>
     </form>
+
+    <a href="/birds">Return to index</a>
+
+
 </body>
 </html>
