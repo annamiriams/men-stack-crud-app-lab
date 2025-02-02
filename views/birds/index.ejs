@@ -6,22 +6,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Birds index</title>
 </head>
 
 <body>
     <h1>All Birds</h1>
-
     <ul>
         <% birds.forEach(bird=> { %>
+            <!-- wrap bird.name in li and an a tag to they're each hyperlinked. hyperlink should dynamically find the _id -->
             <li>
-                <%= bird.name %>
+                <a href="/birds/<%= bird._id %>">
+                    <%= bird.name %>
+                </a>
             </li>
             <% }); %>
     </ul>
 
-    <a href="/birds/new">Add a Bird</a>
-
+    <a href="/birds/new">Add New Bird</a>
 </body>
 
 </html>

@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Add a bird</title>
 </head>
 <body>
@@ -19,12 +20,12 @@
         
             <div>
                 <label for="family">Family:</label>
-                <select id="family" name="family">
+                <select id="family" name="family" required>
                     <option value="dropdown" selected></option>
                     <option value="waterfowl">Waterfowl</option>
                     <option value="shorebirds">Shorebirds</option>
                     <option value="herons">Herons</option>
-                    <option value="birdsOfPrey">Birds of Prey</option>
+                    <option value="birds-of-prey">Birds of Prey</option>
                     <option value="woodpeckers">Woodpeckers</option>
                     <option value="songbirds">Songbirds</option>
                     <option value="other">Other</option>
@@ -34,7 +35,12 @@
             <div>
                 <!-- figure out ids here -->
                 <label for="description">Description:</label>
-                <textarea id="description" name="description" maxLength='100'></textarea>
+                <textarea name="description" id="description" maxLength='100' required></textarea>
+            </div>
+
+            <div>
+                <label for="image">Upload an image:</label>
+                <input type="file" id="image" name="image" accept="image/*">
             </div>
             
             <button type="submit" id="button" style="vertical-align:middle">Submit</button>
@@ -42,7 +48,5 @@
     </form>
 
     <a href="/birds">Return to index</a>
-
-
 </body>
 </html>
