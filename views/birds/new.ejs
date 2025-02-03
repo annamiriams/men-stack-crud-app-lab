@@ -9,44 +9,54 @@
     <title>Add a bird</title>
 </head>
 <body>
-    <h1>Add a bird to the database</h1>
+
+    <div class="container">
+        <img class="owl" src="/images/owl.png"
+            alt="A line drawing of a owl in bright blue and teal. Created by Icongeek26.">
+        <h1>add a bird</h1>
+    </div>
     <form action="/birds" method='POST'>
         <fieldset>
             <legend>Enter info:</legend>
-            <div>
+            <div id="fieldset-div">
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name">
             </div>
         
-            <div>
+            <div id="fieldset-div">
                 <label for="family">Family:</label>
                 <select id="family" name="family" required>
                     <option value="dropdown" selected></option>
-                    <option value="waterfowl">Waterfowl</option>
-                    <option value="shorebirds">Shorebirds</option>
-                    <option value="herons">Herons</option>
-                    <option value="birds-of-prey">Birds of Prey</option>
-                    <option value="woodpeckers">Woodpeckers</option>
-                    <option value="songbirds">Songbirds</option>
-                    <option value="other">Other</option>
+                    <option value="Waterfowl">Waterfowl</option>
+                    <option value="Shorebirds">Shorebirds</option>
+                    <option value="Herons">Herons</option>
+                    <option value="Birds of Prey">Birds of Prey</option>
+                    <option value="Woodpeckers">Woodpeckers</option>
+                    <option value="Songbirds">Songbirds</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 
-            <div>
+            <div id="fieldset-div">
                 <!-- figure out ids here -->
                 <label for="description">Description:</label>
                 <textarea name="description" id="description" maxLength='100' required></textarea>
-            </div>
-
-            <div>
-                <label for="image">Upload an image:</label>
-                <input type="file" id="image" name="image" accept="image/*">
             </div>
             
             <button type="submit" id="button" style="vertical-align:middle">Submit</button>
         </fieldset>
     </form>
 
-    <a href="/birds">Return to index</a>
+    <a class="birds-index-link" href="/birds">
+        <div class="index-link-text">Bird Index</div>
+    </a>
+    <a class="birds-index-link" href="/">
+        <div class="index-link-text">Return Home</div>
+    </a>
 </body>
+
+<footer>
+    Icons by <a href="https://www.flaticon.com/free-icons/heron">Icongeek26</a>
+</footer>
+
 </html>

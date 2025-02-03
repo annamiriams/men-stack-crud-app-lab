@@ -11,7 +11,17 @@
 </head>
 
 <body>
-    <h1>All Birds</h1>
+
+
+    <div class="container">
+        <img class="falcon" src="/images/falcon.png" alt="A line drawing of a falcon in bright blue and teal. Created by Icongeek26.">
+        <h1>all birds</h1>
+    </div>    
+    
+    <p>
+        Click any bird below to learn more, or add a new bird to the database.
+    </p>
+
     <ul>
         <% birds.forEach(bird=> { %>
             <!-- wrap bird.name in li and an a tag to they're each hyperlinked. hyperlink should dynamically find the _id -->
@@ -23,7 +33,16 @@
             <% }); %>
     </ul>
 
-    <a href="/birds/new">Add New Bird</a>
+    <a class="birds-index-link" href="/birds/new">
+        <div class="index-link-text">Add a Bird</div>
+    </a>
+    <a class="birds-index-link" href="/">
+        <div class="index-link-text">Return Home</div>
+    </a>
 </body>
+
+<footer>
+    Icons by <a href="https://www.flaticon.com/free-icons/heron">Icongeek26</a>
+</footer>
 
 </html>

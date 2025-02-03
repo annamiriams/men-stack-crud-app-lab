@@ -9,7 +9,12 @@
     <title><%= bird.name %></title>
 </head>
 <body>
-    <h1>Edit a bird in the database</h1>
+    <div class="container">
+        <img class="woodpecker" src="/images/woodpecker.png"
+            alt="A line drawing of a woodpecker in bright blue and teal. Created by Icongeek26.">
+        <h1>edit a bird</h1>
+    </div>
+
     <form action="/birds/<%=bird._id%>?_method=PUT" method="POST">
         <fieldset>
             <legend>Enter info:</legend>
@@ -26,7 +31,7 @@
                     <option value="waterfowl" <%=bird.family == 'waterfowl' ? 'selected' : '' %>>Waterfowl</option>
                     <option value="shorebirds" <%=bird.family == 'shorebirds' ? 'selected' : '' %>>Shorebirds</option>
                     <option value="herons" <%=bird.family == 'herons' ? 'selected' : '' %>>Herons</option>
-                    <option value="birds-of-prey" <%=bird.family == 'birdsOfPrey' ? 'selected' : '' %>>Birds of Prey</option>
+                    <option value="Birds of Prey" <%=bird.family == 'birdsOfPrey' ? 'selected' : '' %>>Birds of Prey</option>
                     <option value="woodpeckers" <%=bird.family == 'woodpeckers' ? 'selected' : '' %>>Woodpeckers</option>
                     <option value="songbirds" <%=bird.family == 'songbirds' ? 'selected' : '' %>>Songbirds</option>
                     <option value="other" <%=bird.family == 'other' ? 'selected' : '' %>>Other</option>
@@ -49,7 +54,14 @@
     </form>
 
     <a href="/birds">Return to index</a>
-
+    <a class="birds-index-link" href="/">
+        <div class="index-link-text">Return Home</div>
+    </a>
 
 </body>
+
+<footer>
+    Icons by <a href="https://www.flaticon.com/free-icons/heron">Icongeek26</a>
+</footer>
+
 </html>

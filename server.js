@@ -26,6 +26,9 @@ app.use(morgan('dev'));
 
 // 'middleware to serve static files from the directory'
 app.use(express.static(path.join(__dirname, "public")));
+// not sure if this is needed? this is trying to get the img to show up in ejs files
+app.use(express.static('public'));
+
 
 // ----------------------------ROUTES----------------------------
 
