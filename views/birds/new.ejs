@@ -2,12 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Add a bird</title>
 </head>
+
 <body>
 
     <div class="container">
@@ -15,6 +17,15 @@
             alt="A line drawing of a owl in bright blue and teal. Created by Icongeek26.">
         <h1>add a bird</h1>
     </div>
+
+    <a class="birds-index-link" href="/">
+        <div class="index-link-text">Return Home</div>
+    </a>
+    <a class="birds-index-link" href="/birds">
+        <div class="index-link-text">Browse Birds</div>
+    </a>
+
+
     <form action="/birds" method='POST'>
         <fieldset>
             <legend>Enter info:</legend>
@@ -22,7 +33,7 @@
                 <label for="name">Name:</label>
                 <input type="text" name="name" id="name">
             </div>
-        
+
             <div id="fieldset-div">
                 <label for="family">Family:</label>
                 <select id="family" name="family" required>
@@ -40,19 +51,14 @@
             <div id="fieldset-div">
                 <!-- figure out ids here -->
                 <label for="description">Description:</label>
-                <textarea name="description" id="description" maxLength='100' required></textarea>
+                <textarea name="description" id="description" maxLength='00' required></textarea>
             </div>
-            
+
             <button type="submit" id="button" style="vertical-align:middle">Submit</button>
         </fieldset>
     </form>
 
-    <a class="birds-index-link" href="/birds">
-        <div class="index-link-text">Bird Index</div>
-    </a>
-    <a class="birds-index-link" href="/">
-        <div class="index-link-text">Return Home</div>
-    </a>
+
 </body>
 
 <footer>

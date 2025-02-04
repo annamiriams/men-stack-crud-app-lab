@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const birdSchema = new mongoose.Schema({
     name: {
         type: String,
-        // why is this used in the example? what if they're all required?
         required: true
     },
     family: String,

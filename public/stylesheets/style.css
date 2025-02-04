@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comfortaa:wght@300..700&family=DM+Serif+Display:ital@0;1&family=Danfo&family=Domine:wght@400..700&family=Forum&family=Major+Mono+Display&family=Poiret+One&family=Roboto+Condensed:ital,wght@0,100;1,100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,300;1,300&display=swap');
 
-html, body {
+html,
+body {
     background-color: black;
     color: #06D9F0;
     font-family: 'Comfortaa', serif;
@@ -17,14 +18,16 @@ html, body {
 }
 
 img {
-    width: 20%;
+    width: 25%;
+}
+
+.feathers {
+    width: 15%;
 }
 
 h1 {
-    /* color: #ffbd59; */
-    font-size: 4em;
+    font-size: 6em;
     margin-bottom: 0;
-
 }
 
 li {
@@ -33,7 +36,7 @@ li {
 
 fieldset {
     border-color: #19E4BD;
-    border-radius: 10px;   
+    border-radius: 10px;
     color: #ffbd59;
 }
 
@@ -42,38 +45,44 @@ legend {
     font-size: 20px;
 }
 
-#name, 
-#family, 
+#name,
+#family,
 #description {
     font-family: 'Comfortaa', serif;
     width: 70%;
     border-radius: 6px;
     border: 0;
+    margin: 6px;
 }
 
 #button {
     font-family: 'Comfortaa', serif;
     margin: 10px;
     justify-content: center;
-    border-radius: 6px;
+    border-radius: 25px;
     border: 0;
     height: 25px;
     width: 70px;
-    background-color: #f47b5b;
-    box-shadow: 0 5px #ffbd59;
+    background-color: #0635C9;
+    box-shadow: 0 5px #06D9F0;
     color: white;
+    cursor: pointer;
 }
 
 #fieldset-div {
     padding: 6px;
 }
 
-footer {
-    /* this is finally how i got the footer at the bottom of the page */
-    padding-top: 100%;
+form {
+    width: 50%;
 }
 
-a:link, a:visited {
+footer {
+    padding-top: 20px;
+}
+
+a:link,
+a:visited {
     color: #053BCD;
     background-color: transparent;
     text-decoration: none;
@@ -84,7 +93,7 @@ a:link, a:visited {
 }
 
 .index-link-text {
-    background-color: #f47b5b;
+    background-color: #0635C9;
     color: white;
     font-size: 1.2em;
     width: 8em;
@@ -92,18 +101,66 @@ a:link, a:visited {
     margin: 15px;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 0 5px #ffbd59;
+    box-shadow: 0 5px #06D9F0;
 }
 
-#button,
 .index-link-text:hover {
-    background-color: #ffbd59;
-    box-shadow: 0 5px #f47b5b;
+    background-color: #06D9F0;
+    box-shadow: 0 5px #0635C9;
 }
 
-#button,
-.index-link-text:active {
-    background-color: #f47b5b;
-    box-shadow: 0 2.5px #ffbd59;
-    transition-duration: 0.3s;
+#edit {
+    cursor: pointer;
+    font-family: 'Comfortaa', serif;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9em;
+    padding: 0;
+}
+
+#button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#info-container {
+    border: 1px solid #06D9F0;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+    width: 40%;
+}
+
+#delete {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0635C9;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Comfortaa', serif;
+    box-shadow: 0 5px #06D9F0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9em;
+}
+
+#delete:hover {
+    background-color: #06D9F0;
+    box-shadow: 0 5px #0635C9;
+}
+
+#delete:active {
+    background-color: #0635C9;
+    box-shadow: 0 2.5px #06D9F0;
 }

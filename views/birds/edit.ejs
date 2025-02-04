@@ -2,18 +2,29 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title><%= bird.name %></title>
+    <title>
+        <%= bird.name %>
+    </title>
 </head>
+
 <body>
     <div class="container">
         <img class="woodpecker" src="/images/woodpecker.png"
             alt="A line drawing of a woodpecker in bright blue and teal. Created by Icongeek26.">
         <h1>edit a bird</h1>
     </div>
+
+    <a class="birds-index-link" href="/">
+        <div class="index-link-text">Return Home</div>
+    </a>
+    <a class="birds-index-link" href="/birds">
+        <div class="index-link-text">Browse Birds</div>
+    </a>
 
     <form action="/birds/<%=bird._id%>?_method=PUT" method="POST">
         <fieldset>
@@ -23,40 +34,29 @@
                 <input type="text" name="name" id="name" value="<%= bird.name %>">
             </div>
 
-            <div>
+            <div class="form-container">
                 <label for="family">Family:</label>
                 <select id="family" name="family">
                     <!-- ternary operators for each dropdown option so that when the user edits a bird, they will see the corresponding dropdown that had previously been entered for said bird -->
-                    <option value="dropdown" <%=bird.family == '' ? 'selected' : '' %>></option>
-                    <option value="waterfowl" <%=bird.family == 'waterfowl' ? 'selected' : '' %>>Waterfowl</option>
-                    <option value="shorebirds" <%=bird.family == 'shorebirds' ? 'selected' : '' %>>Shorebirds</option>
-                    <option value="herons" <%=bird.family == 'herons' ? 'selected' : '' %>>Herons</option>
-                    <option value="Birds of Prey" <%=bird.family == 'birdsOfPrey' ? 'selected' : '' %>>Birds of Prey</option>
-                    <option value="woodpeckers" <%=bird.family == 'woodpeckers' ? 'selected' : '' %>>Woodpeckers</option>
-                    <option value="songbirds" <%=bird.family == 'songbirds' ? 'selected' : '' %>>Songbirds</option>
-                    <option value="other" <%=bird.family == 'other' ? 'selected' : '' %>>Other</option>
+                    <option value="dropdown" <%=bird.family=='' ? 'selected' : '' %>></option>
+                    <option value="Waterfowl" <%=bird.family=='waterfowl' ? 'selected' : '' %>>Waterfowl</option>
+                    <option value="Shorebirds" <%=bird.family=='shorebirds' ? 'selected' : '' %>>Shorebirds</option>
+                    <option value="Herons" <%=bird.family=='herons' ? 'selected' : '' %>>Herons</option>
+                    <option value="Birds of Prey" <%=bird.family=='birdsOfPrey' ? 'selected' : '' %>>Birds of Prey</option>
+                    <option value="Woodpeckers" <%=bird.family=='woodpeckers' ? 'selected' : '' %>>Woodpeckers</option>
+                    <option value="Songbirds" <%=bird.family=='songbirds' ? 'selected' : '' %>>Songbirds</option>
+                    <option value="Other" <%=bird.family=='other' ? 'selected' : '' %>>Other</option>
                 </select>
             </div>
 
             <div>
                 <label for="description">Description:</label>
-                <textarea name="description" id="description" maxLength='100'><%= bird.description %></textarea>
+                <textarea name="description" id="description" maxLength='500'><%= bird.description %></textarea>
             </div>
-
-            <div>
-                <label for="image">Upload an image:</label>
-                <input type="file" id="image" name="image" accept="image/*">
-            </div>
-
 
             <button type="submit" id="button" style="vertical-align:middle">Submit</button>
         </fieldset>
     </form>
-
-    <a href="/birds">Return to index</a>
-    <a class="birds-index-link" href="/">
-        <div class="index-link-text">Return Home</div>
-    </a>
 
 </body>
 
