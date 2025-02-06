@@ -31,33 +31,35 @@
             <legend>Enter info:</legend>
             <div>
                 <label for="name">Name:</label>
+                <p>Enter a bird's common name. Feel free to include the scientific name in the description below.</p>
                 <input type="text" name="name" id="name" value="<%= bird.name %>">
             </div>
 
             <div class="form-container">
                 <label for="family">Family:</label>
+                <p>Choose from the dropdown below. If choosing "other", please provide additional information in the description below.</p>
                 <select id="family" name="family">
                     <!-- ternary operators for each dropdown option so that when the user edits a bird, they will see the corresponding dropdown that had previously been entered for said bird -->
-                    <option value="dropdown" <%=bird.family=='' ? 'selected' : '' %>></option>
-                    <option value="Waterfowl" <%=bird.family=='waterfowl' ? 'selected' : '' %>>Waterfowl</option>
-                    <option value="Shorebirds" <%=bird.family=='shorebirds' ? 'selected' : '' %>>Shorebirds</option>
-                    <option value="Herons" <%=bird.family=='herons' ? 'selected' : '' %>>Herons</option>
-                    <option value="Birds of Prey" <%=bird.family=='birdsOfPrey' ? 'selected' : '' %>>Birds of Prey</option>
-                    <option value="Woodpeckers" <%=bird.family=='woodpeckers' ? 'selected' : '' %>>Woodpeckers</option>
-                    <option value="Songbirds" <%=bird.family=='songbirds' ? 'selected' : '' %>>Songbirds</option>
-                    <option value="Other" <%=bird.family=='other' ? 'selected' : '' %>>Other</option>
+                    <option value="dropdown" <%=bird.family === '' ? 'selected' : '' %>></option>
+                    <option value="Waterfowl" <%=bird.family === 'Waterfowl' ? 'selected' : '' %>>Waterfowl</option>
+                    <option value="Shorebirds" <%=bird.family === 'Shorebirds' ? 'selected' : '' %>>Shorebirds</option>
+                    <option value="Herons" <%=bird.family === 'Herons' ? 'selected' : '' %>>Herons</option>
+                    <option value="Birds of Prey" <%=bird.family === 'Birds of Prey' ? 'selected' : '' %>>Birds of Prey</option>
+                    <option value="Woodpeckers" <%=bird.family === 'Woodpeckers' ? 'selected' : '' %>>Woodpeckers</option>
+                    <option value="Songbirds" <%=bird.family === 'Songbirds' ? 'selected' : '' %>>Songbirds</option>
+                    <option value="Other" <%=bird.family === 'Other' ? 'selected' : '' %>>Other</option>
                 </select>
             </div>
 
             <div>
                 <label for="description">Description:</label>
+                <p>Provide any notable information such as a description, typical habitat, nesting area, conservation status, etc.</p>
                 <textarea name="description" id="description" maxLength='500'><%= bird.description %></textarea>
             </div>
 
             <button type="submit" id="button" style="vertical-align:middle">Submit</button>
         </fieldset>
     </form>
-
 </body>
 
 <footer>

@@ -14,21 +14,18 @@ dotenv.config();
 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on("connected", () => {
-    console.log(`Connected to MongoDB ${mongoose.connection.name}.`); // make sure to update .name
+    console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
 const Bird = require('./models/bird.js');
 
-// still just accepting that thes lines of code are needed but still not understanding why...
+// still just accepting that these lines of code are needed but still not understanding why...
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 
 // 'middleware to serve static files from the directory'
 app.use(express.static(path.join(__dirname, "public")));
-// not sure if this is needed? this is trying to get the img to show up in ejs files
-app.use(express.static('public'));
-
 
 // ----------------------------ROUTES----------------------------
 
@@ -99,10 +96,3 @@ app.get("/birds/:birdId", async (req, res) => {
 app.listen(3000, () => {
     console.log('Listening on port 3000.');
 });
-
-// ----------------------------QUESTIONS----------------------------
-
-
-// ID syntax in edit.ejs and new.ejs files
-
-// lots of bugs to figure out in edit.ejs

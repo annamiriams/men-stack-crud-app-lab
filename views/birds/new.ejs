@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <img class="owl" src="/images/owl.png"
             alt="A line drawing of a owl in bright blue and teal. Created by Icongeek26.">
@@ -31,11 +30,14 @@
             <legend>Enter info:</legend>
             <div id="fieldset-div">
                 <label for="name">Name:</label>
+                <p>Enter a bird's common name. Feel free to include the scientific name in the description below.</p>
                 <input type="text" name="name" id="name">
+
             </div>
 
             <div id="fieldset-div">
                 <label for="family">Family:</label>
+                <p>Choose from the dropdown below. If choosing "other", please provide additional information in the description below.</p>
                 <select id="family" name="family" required>
                     <option value="dropdown" selected></option>
                     <option value="Waterfowl">Waterfowl</option>
@@ -49,16 +51,14 @@
             </div>
 
             <div id="fieldset-div">
-                <!-- figure out ids here -->
                 <label for="description">Description:</label>
+                <p>Provide any notable information such as a description, typical habitat, nesting area, conservation status, etc.</p>
                 <textarea name="description" id="description" maxLength='00' required></textarea>
             </div>
 
             <button type="submit" id="button" style="vertical-align:middle">Submit</button>
         </fieldset>
     </form>
-
-
 </body>
 
 <footer>

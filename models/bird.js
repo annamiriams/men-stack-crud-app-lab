@@ -3,10 +3,17 @@ const mongoose = require('mongoose');
 const birdSchema = new mongoose.Schema({
     name: {
         type: String,
+        required: true,
+        unique: true
+    },
+    family: {
+        type: String,
         required: true
     },
-    family: String,
-    description: String,
+    description: {
+        type: String,
+        required: true
+    }
 });
 
 // singular here because we're defining what bird is, not what all birds are
